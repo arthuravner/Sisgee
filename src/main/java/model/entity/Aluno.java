@@ -6,6 +6,8 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 
+import com.sun.jna.platform.unix.X11.Cursor;
+
 public class Aluno {
 
 	 @Id
