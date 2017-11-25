@@ -1,0 +1,11 @@
+package model.dao;
+
+import model.entity.Curso;
+import persistence.GenericDAO;
+import persistence.PersistenceManager;
+
+public class CursoDAO extends GenericDAO<Curso>{
+	public CursoDAO(){
+		super(Curso.class, PersistenceManager.getEntityManager());
+	}
+}
