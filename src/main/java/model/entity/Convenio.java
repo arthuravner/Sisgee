@@ -121,10 +121,9 @@ public class Convenio {
 		return true;
 	}
 
-	public Convenio(int idConvenio, Date dataInicioConvenio, String numeroConvenio, Date dataFimConvenio,
-			int idEmpresa) {
+	public Convenio( Date dataInicioConvenio, String numeroConvenio, Date dataFimConvenio,	int idEmpresa) {
 		super();
-		this.idConvenio = idConvenio;
+		
 		this.dataInicioConvenio = dataInicioConvenio;
 		this.numeroConvenio = numeroConvenio;
 		this.dataFimConvenio = dataFimConvenio;
