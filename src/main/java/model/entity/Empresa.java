@@ -69,9 +69,8 @@ public class Empresa {
 	public void setIdAgenteIntegracao(int idAgenteIntegracao) {
 		this.idAgenteIntegracao = idAgenteIntegracao;
 	}
-	public Empresa(int idEmpresa, String nomeEmpresa, int idAgenteIntegracao, String cnpjEmpresa) {
-		super();
-		this.idEmpresa = idEmpresa;
+	public Empresa(String nomeEmpresa, int idAgenteIntegracao, String cnpjEmpresa) {
+		
 		this.nomeEmpresa = nomeEmpresa;
 		this.idAgenteIntegracao = idAgenteIntegracao;
 		this.cnpjEmpresa = cnpjEmpresa;

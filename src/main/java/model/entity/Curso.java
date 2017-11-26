@@ -73,10 +73,10 @@ public class Curso {
 
 
 
-	public Curso(Integer id, String nomeCurso, String codigoCurso, int idCampus){
+	public Curso( String nomeCurso, String codigoCurso, int idCampus){
 
 		this.idCampus= idCampus;
-		this.idCurso = id;
+		
 		this.nomeCurso = nomeCurso;
 		this.codigoCurso=codigoCurso;
 
