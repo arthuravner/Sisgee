@@ -24,4 +24,16 @@ public class TermoEstagioServices {
 			PersistenceManager.getTransaction().rollback();
 		}
 	}
+	
+	public static void alterarTermoEstagio(TermoEstagio termoEstagio) {
+		TermoEstagioDAO termoEstagioDAO = new TermoEstagioDAO();
+		PersistenceManager.getTransaction().begin();
+		try {
+			termoEstagioDAO.alterar(termoEstagio);//Método alterar(obj) contido na classe GenericDAO
+			PersistenceManager.getTransaction().begin();
+		}catch(Exception e) {
+			PersistenceManager.getTransaction().rollback();
+		}
+	}
+	
 }

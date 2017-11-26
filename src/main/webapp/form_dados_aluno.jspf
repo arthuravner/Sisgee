@@ -1,0 +1,26 @@
+
+<div class="col-md-4 col-md-offset-4">	
+	<br/>
+	<form method="POST" action="BuscarAlunoServlet" >	
+		<table >
+			<tr >
+				<td><label>Matrícula</label></td>
+				<td><input id="txtMatricula" type="text" style="margin-left: 10px;" /></td>		
+				<td><button id="btnBuscarAluno" type="submit" class="btn btn-primary" style="margin-left: 10px;">Buscar</button></td>
+			</tr>
+			<tr>
+				<td><label>Nome</label></td>
+				<td colspan=2 ><input id="txtNome" type="text" disabled="disabled" style="margin-left: 10px;"/></td> 
+			</tr>
+			<tr>
+				<td><label>Curso</label></td>
+				<td colspan=2 ><input id="txtCurso" type="text" disabled="disabled" style="margin-left: 10px;" /></td>
+			</tr>
+			<tr>
+				<td><label>Unidade</label></td>
+				<td colspan=2><input id="txtUnidade" type="text" disabled="disabled" style="margin-left: 10px;" /></td>
+			</tr>
+		</table>			
+	</form>
+	<br/>
+</div>
