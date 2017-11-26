@@ -20,15 +20,16 @@ public class FrontControllerServlet extends HttpServlet  {
 	private static Map<String, Command> comandos = new HashMap<String, Command>();
 	
 	static{
-		comandos.put("TermoRecisaoCommand", new BuscarAlunoCommand());
+		comandos.put("BuscarAluno", new BuscarAlunoCommand());
 	}	
 	
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		try{
 			String action = req.getParameter("action");
+			System.out.println("Action: " + action);
 			comandos.get(action).execute(req, resp);
-		} catch(Exception e){
+		} catch(Exception e){			
 			req.getRequestDispatcher("/erro.jsp").forward(req, resp);
 		}
 	}

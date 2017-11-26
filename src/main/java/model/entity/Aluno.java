@@ -21,11 +21,11 @@ public class Aluno{
 	
 	 @OneToOne(optional = false)
 	 @JoinColumn(name="Curso")
-	 private Curso idCurso;
+	 private Curso curso;
 	 
 	 @OneToOne(optional = false)
 	 @JoinColumn(name="Pessoa")
-	 private Pessoa idPessoa;
+	 private Pessoa pessoa;
 
 	public String getMatricula() {
 		return matricula;
@@ -44,11 +44,11 @@ public class Aluno{
 	}
 
 	public Curso getIdCurso() {
-		return idCurso;
+		return curso;
 	}
 
 	public Pessoa getIdPessoa() {
-		return idPessoa;
+		return pessoa;
 	}
 
 	@Override
