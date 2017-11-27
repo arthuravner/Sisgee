@@ -5,7 +5,7 @@
 		<%@ include file="head_imports.jspf" %>
 	</head>
 	<body>
-		
+		<%@ include file="menu.jspf" %>
 		<div class="container">
             <h2 class="titulo">Registro de Empresa Ligada ao Agente de Integração</h2>
            
@@ -28,5 +28,6 @@
                 </fieldset>
 			</form>
         </div>
+		   <%@ include file="scripts_imports.jspf" %>
 	</body>
 </html>
