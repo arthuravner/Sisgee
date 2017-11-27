@@ -4,9 +4,10 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
-
+@Entity
 public class Empresa {
 
 	@Id
@@ -17,7 +18,8 @@ public class Empresa {
 	private String nomeEmpresa;
 	
 	@ManyToOne(optional=true)
-	private int idAgenteIntegracao;
+	@JoinColumn(name = "idAgenteIntegracao")
+	private AgenteIntegracao agenteIntegracao;
 	
 	@Column(name="cnpjEmpresa",length=14,nullable=true)
 	private String cnpjEmpresa;
@@ -60,19 +62,19 @@ public class Empresa {
 	/**
 	 * @return the idAgenteIntegracao
 	 */
-	public int getIdAgenteIntegracao() {
-		return idAgenteIntegracao;
+	public AgenteIntegracao getAgenteIntegracao() {
+		return agenteIntegracao;
 	}
 	/**
 	 * @param idAgenteIntegracao the idAgenteIntegracao to set
 	 */
-	public void setIdAgenteIntegracao(int idAgenteIntegracao) {
-		this.idAgenteIntegracao = idAgenteIntegracao;
+	public void setAgenteIntegracao(AgenteIntegracao agenteIntegracao) {
+		this.agenteIntegracao = agenteIntegracao;
 	}
-	public Empresa(String nomeEmpresa, int idAgenteIntegracao, String cnpjEmpresa) {
+	public Empresa(String nomeEmpresa, AgenteIntegracao agenteIntegracao, String cnpjEmpresa) {
 		
 		this.nomeEmpresa = nomeEmpresa;
-		this.idAgenteIntegracao = idAgenteIntegracao;
+		this.agenteIntegracao = agenteIntegracao;
 		this.cnpjEmpresa = cnpjEmpresa;
 	}
 	

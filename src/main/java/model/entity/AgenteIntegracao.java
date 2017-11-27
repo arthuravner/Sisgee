@@ -1,9 +1,11 @@
 package model.entity;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+@Entity
 public class AgenteIntegracao {
 
 	 @Id
@@ -16,9 +18,7 @@ public class AgenteIntegracao {
 	 
 	 @Column (name="nomeAgenteIntegracao",length=100,nullable=false)
 	 private String nomeAgenteIntegracao;
-	 
-	 
-
+	 	 
 	public String getCnpjAgenteIntegracao() {
 		return cnpjAgenteIntegracao;
 	}

@@ -1,11 +1,13 @@
 package model.entity;
 import java.util.Date;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
@@ -50,18 +52,18 @@ public class TermoEstagio {
 	private String estadoEnderecoTermoEstagio;
 	
 	private int eEstagioObrigatorio;
-	
-	@OneToMany()
-	@JoinColumn(name="idAluno")
-	private int idProfessorOrientador;
+		
+	@ManyToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "idProfessorOrientador")
+	private ProfessorOrientador professorOrientador;
 	
 	@OneToOne(optional = false)
 	@JoinColumn(name="idAluno")
-	private int idAluno;
+	private Aluno aluno;
 	
-	@OneToMany()
-	@JoinColumn(name="idAluno")
-	private int idConvenio;
+	@ManyToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "idConvenio")
+	private Convenio convenio;
 
 	public int getIdTermoEstagio() {
 		return idTermoEstagio;
@@ -182,29 +184,29 @@ public class TermoEstagio {
 	public void seteEstagioObrigatorio(int eEstagioObrigatorio) {
 		this.eEstagioObrigatorio = eEstagioObrigatorio;
 	}
-
-	public int getIdProfessorOrientador() {
-		return idProfessorOrientador;
+	
+	public ProfessorOrientador getProfessorOrientador() {
+		return professorOrientador;
 	}
 
-	public void setIdProfessorOrientador(int idProfessorOrientador) {
-		this.idProfessorOrientador = idProfessorOrientador;
+	public void setIdProfessorOrientador(ProfessorOrientador professorOrientador) {
+		this.professorOrientador = professorOrientador;
 	}
 
-	public int getIdAluno() {
-		return idAluno;
+	public Aluno getAluno() {
+		return aluno;
 	}
 
-	public void setIdAluno(int idAluno) {
-		this.idAluno = idAluno;
+	public void setAluno(Aluno aluno) {
+		this.aluno = aluno;
+	}
+	
+	public Convenio getConvenio() {
+		return convenio;
 	}
 
-	public int getIdConvenio() {
-		return idConvenio;
-	}
-
-	public void setIdConvenio(int idConvenio) {
-		this.idConvenio = idConvenio;
+	public void setIdConvenio(Convenio convenio) {
+		this.convenio = convenio;
 	}
 
 	@Override

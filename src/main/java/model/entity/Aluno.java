@@ -1,11 +1,13 @@
 package model.entity;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 
+@Entity
 public class Aluno{
 
 	 @Id
@@ -20,11 +22,11 @@ public class Aluno{
 	 private String situacao;
 	
 	 @OneToOne(optional = false)
-	 @JoinColumn(name="Curso")
+	 @JoinColumn(name="idCurso")	 
 	 private Curso curso;
 	 
 	 @OneToOne(optional = false)
-	 @JoinColumn(name="Pessoa")
+	 @JoinColumn(name="idPessoa")	 
 	 private Pessoa pessoa;
 
 	public String getMatricula() {

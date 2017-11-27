@@ -3,11 +3,13 @@ package model.entity;
 import java.util.Date;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 
+@Entity
 public class TermoAditivo {
 
 	 @Id
@@ -15,7 +17,7 @@ public class TermoAditivo {
 	 @Column (name="idTermoAditivo", unique = true)
 	 private int idTermoAditivo;
 		 
-	 @Column (name="dataFimTermoAditivo",nullable=false)
+	 @Column (name="dataFimTermoAditivo",nullable=false, insertable=true, updatable=true)
 	 private Date dataFimTermoAditivo;
 	 
 	 @Column (name="cargaHorariaTermoAditivo",nullable=true)
@@ -27,10 +29,10 @@ public class TermoAditivo {
 	 @Column (name="enderecoTermoAditivo",length=255, nullable=true)
 	 private String enderecoTermoAditivo;
 	 
-	 @Column (name="dataFimTermoAditivo",length=10, nullable=true)
+	 @Column (name="numeroEnderecoTermoAditivo",length=10, nullable=true)
 	 private String numeroEnderecoTermoAditivo;
 	 
-	 @Column (name="dataFimTermoAditivo",length=255, nullable=true)
+	 @Column (name="complementoEnderecoTermoEstagio",length=255, nullable=true)
 	 private String complementoEnderecoTermoEstagio;
 	 
 	 @Column (name="bairroEnderecoTermoAditivo",length=150 ,nullable=true)

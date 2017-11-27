@@ -4,6 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
 
@@ -22,7 +23,8 @@ public class Curso {
 
 
 	@ManyToOne()
-	private int idCampus;
+	@JoinColumn(name = "idCampus")
+	private Campus campus;
 
 	/**
 	 * @return the idCurso
@@ -61,21 +63,21 @@ public class Curso {
 	/**
 	 * @return the idCampus
 	 */
-	public int getIdCampus() {
-		return idCampus;
+	public Campus getCampus() {
+		return campus;
 	}
 	/**
 	 * @param idCampus the idCampus to set
 	 */
-	public void setIdCampus(int idCampus) {
-		this.idCampus = idCampus;
+	public void setCampus(Campus campus) {
+		this.campus = campus;
 	}
 
 
 
-	public Curso( String nomeCurso, String codigoCurso, int idCampus){
+	public Curso( String nomeCurso, String codigoCurso, Campus campus){
 
-		this.idCampus= idCampus;
+		this.campus= campus;
 		
 		this.nomeCurso = nomeCurso;
 		this.codigoCurso=codigoCurso;

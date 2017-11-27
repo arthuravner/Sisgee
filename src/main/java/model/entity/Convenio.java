@@ -2,11 +2,15 @@ package model.entity;
 
 import java.util.Date;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
+@Entity
 public class Convenio {
 
 	@Id
@@ -19,9 +23,10 @@ public class Convenio {
 	private String numeroConvenio;
 	
 	private Date dataFimConvenio;
-	
-	@ManyToOne
-	private int idEmpresa;
+		
+	@ManyToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "idEmpresa")
+	private Empresa empresa;
 
 	/**
 	 * @return the idConvenio
@@ -82,15 +87,15 @@ public class Convenio {
 	/**
 	 * @return the idEmpresa
 	 */
-	public int getIdEmpresa() {
-		return idEmpresa;
+	public Empresa getIdEmpresa() {
+		return empresa;
 	}
 
 	/**
 	 * @param idEmpresa the idEmpresa to set
 	 */
-	public void setIdEmpresa(int idEmpresa) {
-		this.idEmpresa = idEmpresa;
+	public void setIdEmpresa(Empresa empresa) {
+		this.empresa = empresa;
 	}
 
 	/* (non-Javadoc)
@@ -121,13 +126,13 @@ public class Convenio {
 		return true;
 	}
 
-	public Convenio( Date dataInicioConvenio, String numeroConvenio, Date dataFimConvenio,	int idEmpresa) {
+	public Convenio( Date dataInicioConvenio, String numeroConvenio, Date dataFimConvenio,	Empresa empresa) {
 		super();
 		
 		this.dataInicioConvenio = dataInicioConvenio;
 		this.numeroConvenio = numeroConvenio;
 		this.dataFimConvenio = dataFimConvenio;
-		this.idEmpresa = idEmpresa;
+		this.empresa = empresa;
 	}
 	
 	public Convenio(){
