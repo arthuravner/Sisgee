@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
 @Entity
@@ -21,7 +23,7 @@ public class Aluno{
 	 @Column (name="situacao",length=100,nullable=false)
 	 private String situacao;
 	
-	 @OneToOne(optional = false)
+	 @ManyToOne(optional=false)
 	 @JoinColumn(name="idCurso")	 
 	 private Curso curso;
 	 
@@ -45,11 +47,15 @@ public class Aluno{
 		this.situacao = situacao;
 	}
 
-	public Curso getIdCurso() {
+	public Curso getCurso() {
 		return curso;
 	}
 
-	public Pessoa getIdPessoa() {
+	public void setCurso (Curso curso) {
+		this.curso = curso;
+	}
+	
+	public Pessoa getPessoa() {
 		return pessoa;
 	}
 
@@ -73,5 +79,10 @@ public class Aluno{
 		if (idAluno != other.idAluno)
 			return false;
 		return true;
+	}
+	
+	public String toString()
+	{
+		return pessoa.getNome();
 	}
 }

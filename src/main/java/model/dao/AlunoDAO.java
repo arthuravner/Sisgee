@@ -14,8 +14,8 @@ public class AlunoDAO {
 		
 		try{
 		String sql = "SELECT a "
-				+ "   FROM Aluno"
-				+ "   WHERE matricula = '" + strMatricula + "'";
+				+ "   FROM Aluno a"
+				+ "   WHERE matricula = 'BCC4352'"; // + strMatricula + "'";
 		
 		Query q = PersistenceManager.getInstance().createQuery(sql);
 		
@@ -26,6 +26,7 @@ public class AlunoDAO {
 		catch (Exception e)
 		{
 			System.err.println("Erro ao tentar obter aluno, AlunoDAO. Msg Erro: " + e.getMessage());
+			e.printStackTrace();
 		}
 		return aluno;
 	}

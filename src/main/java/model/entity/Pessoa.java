@@ -18,7 +18,6 @@ public class Pessoa {
 	 
 	 @Column (name="cpf",length=14,nullable=false)
 	 private String cpf; 
-	 
 	 @Column(name="nome",length=100,nullable=false)
 	 private String nome; 
 	 

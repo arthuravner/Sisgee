@@ -19,7 +19,7 @@ public class Convenio {
 
 	private Date dataInicioConvenio;
 
-	@Column(name="numeroConvenio",length=255,nullable=true)
+	@Column(name="numeroConvenio",length=10,nullable=true)
 	private String numeroConvenio;
 	
 	private Date dataFimConvenio;

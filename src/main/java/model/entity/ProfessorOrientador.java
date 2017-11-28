@@ -13,7 +13,7 @@ public class ProfessorOrientador {
 	 @Column (name="idProfessorOrientador", unique = true)
 	 private int idProfessorOrientador;
 		 
-	 @Column (name="nomeCampus",length=100,nullable=false)
+	 @Column (name="nomeProfessorOrientador",length=100,nullable=false)
 	 private String nomeProfessorOrientador;
 
 	public String getNomeProfessorOrientador() {
