@@ -11,7 +11,7 @@ public class Campus {
 
 	 @Id
 	 @GeneratedValue(strategy = GenerationType.IDENTITY)
-	 @Column (name="idPessoa", unique = true)
+	 @Column (name="idCampus", unique = true)
 	 private int idCampus;
 		 
 	 @Column (name="nomeCampus",length=100,nullable=false)

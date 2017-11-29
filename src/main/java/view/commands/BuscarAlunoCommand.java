@@ -23,9 +23,10 @@ public class BuscarAlunoCommand implements Command{
 		
 		Aluno aluno = AlunoServices.obterAlunoPorMatricula(strMatricula);
 		
-		request.setAttribute("txtNome", aluno.getPessoa().getNome());
-		request.setAttribute("txtCurso", aluno.getCurso().getNomeCurso());
-		request.setAttribute("txtUnidade", aluno.getCurso().getCampus().getNomeCampus());
+		request.setAttribute("strMatricula", aluno.getMatricula());
+		request.setAttribute("strNome", aluno.getPessoa().getNome());
+		request.setAttribute("strCurso", aluno.getCurso().getNomeCurso());
+		request.setAttribute("strUnidade", aluno.getCurso().getCampus().getNomeCampus());
 		
 		request.getRequestDispatcher("/registroDeRecisao.jsp").forward(request, response);
 		

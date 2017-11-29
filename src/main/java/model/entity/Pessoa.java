@@ -75,7 +75,7 @@ public class Pessoa {
 	 @Column(name="telefoneComercial",length=30,nullable=true)
 	 private String telefoneComercial;
 	 
-	 @Column(name="ddiCelular",nullable=true)
+	 @Column(name="ddiCelular",nullable=false)
 	 private int ddiCelular;
 	 
 	 @Column(name="dddCelular",nullable=true)

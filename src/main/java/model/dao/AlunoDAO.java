@@ -15,7 +15,7 @@ public class AlunoDAO {
 		try{
 		String sql = "SELECT a "
 				+ "   FROM Aluno a"
-				+ "   WHERE matricula = 'BCC4352'"; // + strMatricula + "'";
+				+ "   WHERE matricula = '" + strMatricula + "'";
 		
 		Query q = PersistenceManager.getInstance().createQuery(sql);
 		
