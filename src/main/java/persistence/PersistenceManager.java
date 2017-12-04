@@ -26,6 +26,18 @@ public class PersistenceManager {
 		return manager.getTransaction();
 	}
 
+	public static void begin(){
+		manager.getTransaction().begin();;
+	}
+	
+	public static void rollback(){
+		manager.getTransaction().rollback();;
+	}
+	
+	public static void commit(){
+		manager.getTransaction().commit();;
+	}
+	
 	public static PersistenceManager getInstance() {
 		if (instance == null)
 			instance = new PersistenceManager();

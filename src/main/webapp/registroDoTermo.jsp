@@ -26,8 +26,8 @@
 		</div>
 		</br>
 		</br> CNPJ<input type="text" name="cnpjEmpresa"
-			value="${param.cnpjEmpresa}" /> Razão Social<input type="text"
-			name="razaoSocial" value="${param.razaoSocial}" /></br>
+			value="${param.txtCnpj}" /> Razão Social<input type="text"
+			name="razaoSocial" value="${param.txtRazaoSocial}" /></br>
 		<h2>Dados do Aluno</h2>
 		</br> Matrícula<input type="text" name="matricula"
 			value="${param.matricula}" /> Nome<input type="text" name="nome"

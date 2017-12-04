@@ -15,7 +15,7 @@
 	            <p> Termo de Recisão</p>
     	            	           	            
 	        </div>
-	        
+	        <input name="txtNome" value="${ param.txtNome }" type="text" disabled="disabled" style="margin-left: 10px;"/>
 	        <%@ include file="form_dados_aluno.jspf" %>
 	        <div class="col-md-4 col-md-offset-4">
 	            

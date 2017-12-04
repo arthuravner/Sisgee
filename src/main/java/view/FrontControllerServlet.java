@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import view.commands.BuscarAlunoCommand;
 import view.commands.Command;
+import view.commands.RegistroEmpresaCommand;
 
 @WebServlet("/FrontControllerServlet")
 public class FrontControllerServlet extends HttpServlet  {
@@ -21,6 +22,8 @@ public class FrontControllerServlet extends HttpServlet  {
 	
 	static{
 		comandos.put("BuscarAluno", new BuscarAlunoCommand());
+		comandos.put("RegistroDeEmpresa", new RegistroEmpresaCommand());
+		
 	}	
 	
 	@Override

@@ -5,20 +5,20 @@
 		<table >
 			<tr >
 				<td><label>Matrícula</label></td>
-				<td><input id="txtMatricula" name="txtMatricula" value="${param.strMatricula}" type="text" style="margin-left: 10px;" /></td>		
+				<td><input name="txtMatricula" value="${ param.txtMatricula }" type="text" style="margin-left: 10px;" /></td>		
 				<td><button id="btnBuscarAluno" type="submit" class="btn btn-primary" style="margin-left: 10px;">Buscar</button></td>
 			</tr>
 			<tr>
 				<td><label>Nome</label></td>
-				<td colspan=2 ><input id="txtNome" name="txtNome" value="${param.strNome}" type="text" disabled="disabled" style="margin-left: 10px;"/></td> 
+				<td colspan=2 ><input name="txtNome" value="${ param.txtNome }" type="text" disabled="disabled" style="margin-left: 10px;"/></td> 
 			</tr>
 			<tr>
 				<td><label>Curso</label></td>
-				<td colspan=2 ><input id="txtCurso" name="txtCurso" value="${param.strCurso}" type="text" disabled="disabled" style="margin-left: 10px;" /></td>
+				<td colspan=2 ><input  name="txtCurso" value="${ param.txtCurso }" type="text" disabled="disabled" style="margin-left: 10px;" /></td>
 			</tr>
 			<tr>
 				<td><label>Unidade</label></td>
-				<td colspan=2><input id="txtUnidade" name="strUnidade" value="${param.strUnidade}" type="text" disabled="disabled" style="margin-left: 10px;" /></td>
+				<td colspan=2><input name="txtUnidade" value="${ param.txtUnidade }" type="text" disabled="disabled" style="margin-left: 10px;" /></td>
 			</tr>
 		</table>			
 	</form>
