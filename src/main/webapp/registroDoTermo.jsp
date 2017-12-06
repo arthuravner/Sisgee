@@ -10,7 +10,9 @@
 <body>
 	<%@ include file="menu.jspf"%>
 	<form action="RegistroDoTermoServlet" method="POST">
-		<h2>Dados da Empresa Conveniada</h2>
+		 
+    <h3>Dados da Empresa Conveniada</h3>
+    
 		</br> Número do Convênio<input type="text" name="numeroConvenio"
 			value="${param.numeroConvenio}" /></br>
 		</br> É agente de integração?
@@ -28,6 +30,7 @@
 		</br> CNPJ<input type="text" name="cnpjEmpresa"
 			value="${param.txtCnpj}" /> Razão Social<input type="text"
 			name="razaoSocial" value="${param.txtRazaoSocial}" /></br>
+		
 		<h2>Dados do Aluno</h2>
 		</br> Matrícula<input type="text" name="matricula"
 			value="${param.matricula}" /> Nome<input type="text" name="nome"
