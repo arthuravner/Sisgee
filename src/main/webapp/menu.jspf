@@ -1,6 +1,19 @@
-Index:</br>
-<a href="registroDoTermo.jsp">Registro do Termo</a></br>
-<a href="registroDoAditivo.jsp">Registro do Aditivo</a></br>
-<a href="registroDeRecisao.jsp">Registro de Rescisão</a></br>
-<a href="relatorioConsolidado.jsp">Relatorio Consolidado</a></br>
-<a href="registroDeEmpresa.jsp">Cadastrar Empresa</a></br>
+<div class="container">
+
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+<a class="nav-link " href="registroDoTermo.jsp">Registro do Termo</a>
+  </li>
+  <li class="nav-item">
+<a  class="nav-link " href="registroDoAditivo.jsp">Registro do Aditivo</a>
+  </li>
+  <li class="nav-item">
+<a class="nav-link " href="registroDeRecisao.jsp">Registro de Rescisão</a>
+  </li>
+  <li class="nav-item">
+<a class="nav-link " href="relatorioConsolidado.jsp">Relatorio Consolidado</a>
+  </li>
+   <li class="nav-item">
+<a class="nav-link " href="registroDeEmpresa.jsp">Cadastrar Empresa</a>
+  </li>
+</ul>
